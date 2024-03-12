@@ -11,7 +11,7 @@
 <a>  |  </a>
 <a href="#instalation">Instalation</a>
 <a>  |  </a>
-<a href="#instalation">Usage</a>
+<a href="#usage">Usage</a>
 
 
 
