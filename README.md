@@ -10,6 +10,8 @@
 <a href="#requirements">Requirements</a>
 <a>  |  </a>
 <a href="#instalation">Instalation</a>
+<a>  |  </a>
+<a href="#instalation">Usage</a>
 
 
 
@@ -52,3 +54,36 @@ pip3 install -r requirements.txt
 2. Unzip it
 
 3. Execute the autoaccept.exe</pre>
+
+
+
+
+<h2>Usage</h2>
+<br>
+You will execute the autoaccept
+
+Python3 autoaacept.py or Double click on the .exe
+<br><br>
+![main](https://github.com/manchas73/lol_autoaccept/assets/46001842/f3950d0a-4352-4bb3-b53e-d68cec5ef1a0)
+
+<h3>Ready State</h3>
+Once you open it, it will be like this. If u click the [START] it will start to search a game or the accept button, depending if you are searching or not.
+
+The green L means that it is ready to search
+
+<br><br>
+![search](https://github.com/manchas73/lol_autoaccept/assets/46001842/b94ee032-08a9-472f-8244-4a95509670da)
+
+<h3>Search State</h3>
+When the search of the accept button starts the button will change to red, if you press it it will return to the inital point "Ready State".
+
+The blue L means that is searching
+
+<br><br>
+
+![check](https://github.com/manchas73/lol_autoaccept/assets/46001842/5b6006d1-a1f9-4a8f-bd8b-f753beb1e6b6)
+
+<h3>Check State</h3>
+After accepting a match it will check if the others also accept, if not it will go back "Search State".
+
+The blue L means that is checking
