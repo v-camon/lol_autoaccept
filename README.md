@@ -62,7 +62,7 @@ pip3 install -r requirements.txt
 <br>
 You will execute the autoaccept
 
-Python3 autoaacept.py or Double click on the .exe
+Python3 autoaccept.py or Double click on the .exe
 <br><br>
 ![main](https://github.com/manchas73/lol_autoaccept/assets/46001842/f3950d0a-4352-4bb3-b53e-d68cec5ef1a0)
 
