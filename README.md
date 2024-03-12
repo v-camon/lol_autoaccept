@@ -84,6 +84,7 @@ The blue L means that is searching
 ![check](https://github.com/manchas73/lol_autoaccept/assets/46001842/5b6006d1-a1f9-4a8f-bd8b-f753beb1e6b6)
 
 <h3>Check State</h3>
-After accepting a match it will check if the others also accept, if not it will go back "Search State".
+After accepting a match it will check if the others also accept if they do it will close, if not it will go back "Search State".
 
 The blue L means that is checking
+
