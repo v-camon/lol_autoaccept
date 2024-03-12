@@ -1,4 +1,4 @@
 # LOL AutoAccept
 Autoaccept for League of Legends
 
-![main](https://github.com/manchas73/lol_autoaccept/assets/46001842/f6fb2416-b67f-4d5b-9fc0-0f5a1c8e63aa)
+![main](https://github.com/manchas73/lol_autoaccept/assets/46001842/a3c08759-0bb0-46f0-98b4-7bc35d5792dc)
