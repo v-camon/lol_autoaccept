@@ -32,7 +32,7 @@ For now this is only working with the client on <strong>Spanish</strong> and <st
 
 <h3>For .py</h3>
 
-<pre>
+```console
 # Get the repo
 git clone https://github.com/manchas73/lol_autoaccept
 
@@ -42,7 +42,8 @@ cd lol_autoaccept
 # Install the requirements
 pip3 install -r requirements.txt
 
-</pre>
+```
+
 
 <h3>For .exe</h3>
 
