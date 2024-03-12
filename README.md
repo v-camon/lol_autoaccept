@@ -15,5 +15,5 @@ Autoaccept for League of Legends
 
 
 <h2>Requirements</h2>
-For now this is only working with the client on **Spanish** and **1600x900 resolution**.
+For now this is only working with the client on **Spanish** and **1600x900** resolution.
 <h2>Instalation</h2>
