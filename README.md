@@ -1,16 +1,17 @@
 # LOL Auto Accept
 <br>
 
-![main](https://github.com/manchas73/lol_autoaccept/assets/46001842/a3c08759-0bb0-46f0-98b4-7bc35d5792dc)
+
+<p align="center"> <img src="https://github.com/manchas73/lol_autoaccept/assets/46001842/a3c08759-0bb0-46f0-98b4-7bc35d5792dc"> </p>
 
 
-
+<p align="center">
 <a href="#requirements">Requirements</a>
 <a>  |  </a>
 <a href="#instalation">Instalation</a>
 <a>  |  </a>
 <a href="#usage">Usage</a>
-
+</p>
 
 
 
