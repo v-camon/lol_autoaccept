@@ -30,4 +30,25 @@ For now this is only working with the client on <strong>Spanish</strong> and <st
 
 <h2>Instalation</h2>
 
+<h3>For .py</h3>
 
+<pre>
+# Get the repo
+git clone https://github.com/manchas73/lol_autoaccept
+
+# Move to the autoaccept folder
+cd lol_autoaccept
+
+# Install the requirements
+pip3 install -r requirements.txt
+
+</pre>
+
+<h3>For .exe</h3>
+
+<pre>
+1. Download the release
+
+2. Unzip it
+
+3. Execute the autoaccept.exe</pre>
