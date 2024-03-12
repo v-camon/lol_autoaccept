@@ -17,7 +17,7 @@
 
 
 
-
+<br><br><br>
 
 
 
@@ -28,7 +28,7 @@ For now this is only working with the client on <strong>Spanish</strong> and <st
 -requirements.txt
 
 
-
+<br><br><br>
 
 <h2>Instalation</h2>
 
@@ -56,7 +56,7 @@ pip3 install -r requirements.txt
 3. Execute the autoaccept.exe</pre>
 
 
-
+<br><br><br>
 
 <h2>Usage</h2>
 <br>
