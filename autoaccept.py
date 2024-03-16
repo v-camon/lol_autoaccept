@@ -5,6 +5,7 @@ import pyautogui
 from pynput.mouse import Button, Controller
 from PIL import Image, ImageTk
 import threading
+import sys
 
 
 
@@ -14,9 +15,54 @@ y=2
 mouse = Controller()
 
 
+ruta_base = '.\\data\\'
+
+rutas = [ruta_base + 'a.png',
+         ruta_base + 'b.png',
+         ruta_base + 'c.png',
+         ruta_base + 'd.png',
+         ruta_base + 'x.png',
+         '.\\data\\res_1.png',
+         '.\\data\\res_2.png',
+         '.\\data\\res_3.png']
+a = 0
+b = 1
+c = 2
+d = 3
+x = 4
+res1 = 5
+res2 = 6
+res3 = 7
+
 
 global run
 run = False
+
+
+
+
+
+
+
+class img:
+   
+    def __init__(self,ruta):
+        self.image = Image.open(ruta)
+
+
+    def find(self):
+        try:
+            self.position = pyautogui.locateOnScreen(self.image)
+        except pyautogui.ImageNotFoundException:
+            self.position = None
+    
+
+
+class check_resolution:
+    def __init__(self):
+        pass
+
+
 
 
 class poss:
@@ -35,39 +81,31 @@ def frst ():
     state.search()
     run = True
     time.sleep(1)
-    ruta_imagen_referencia_c = '.\data\\c.png'
-    ruta_imagen_referencia_x = '.\data\\x.png'
-    
-    imagen_referencia_c = Image.open(ruta_imagen_referencia_c)
-    imagen_referencia_x = Image.open(ruta_imagen_referencia_x)
-    
-    position_x = pyautogui.locateOnScreen(imagen_referencia_x)
-    position_c = pyautogui.locateOnScreen(imagen_referencia_c)
-    
-    if position_c is None and position_x:
-        x, y, width, height = position_x
+
+    imagenD.find()
+    imagenX.find()
+
+    if imagenD.position is None and imagenX.position:
+        x, y, width, height = imagenX.position
         x += 37
         poss.get()
         mouse.position = (x,y)
         mouse.press(Button.left)
         mouse.release(Button.left)
         poss.ret()
-        print('Starting searchig')
+        print('Starting search')
     else:
         print('Just Searching')
     
-    search()
 
 
 def search():
     time.sleep(3)
-    ruta_imagen_referencia = '.\data\\a.png'
-    imagen_referencia = Image.open(ruta_imagen_referencia)
-    position = pyautogui.locateOnScreen(imagen_referencia)
-    if position is None:
+    imagenA.find()
+    if imagenA.position is None:
         print("No match yet.")
         return
-    x, y, width, height = position
+    x, y, width, height = imagenA.position
     x += 37
     y += 37
     poss.get()
@@ -115,16 +153,11 @@ def auto_accept_thread():
 
 def check():
     
-    ruta_imagen_referencia_b = '.\data\\b.png'
-    ruta_imagen_referencia_c = '.\data\\c.png'
+    imagenB.find()
+    imagenC.find()
+
     
-    imagen_referencia_b = Image.open(ruta_imagen_referencia_b)
-    imagen_referencia_c = Image.open(ruta_imagen_referencia_c)
-    
-    position_b = pyautogui.locateOnScreen(imagen_referencia_b)
-    position_c = pyautogui.locateOnScreen(imagen_referencia_c)
-    
-    if position_b is not None or position_c is not None:
+    if imagenB.position is not None or imagenC.position is not None:
         print("Restarting search.")
         state.search()
         search()
@@ -165,6 +198,11 @@ class state:
 
 
 
+def on_closing():
+    print("Exiting")
+    sys.exit()
+
+
 Graf = tk.Tk()
 Graf.title("AC")
 Graf.configure(bg="#373737")
@@ -190,6 +228,16 @@ state.ready()
 
 Graf.resizable(False,False)
 
+imagenA = img(rutas[a])
+imagenB = img(rutas[b])
+imagenC = img(rutas[c])
+imagenD = img(rutas[d])
+imagenX = img(rutas[x])
+imagen_res1 = img(rutas[res1])
+imagen_res2 = img(rutas[res2])
+imagen_res3 = img(rutas[res1])
+
+Graf.protocol("WM_DELETE_WINDOW", on_closing)
 
 Graf.mainloop()
 
