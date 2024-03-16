@@ -21,32 +21,20 @@
 
 
 <h2>Requirements</h2>
+
+Have the client on spanish
+<br>
+Have the client on 1600x900 resolution
+<br>
 For now this is only working with the client on <strong>Spanish</strong> and <strong>1600x900</strong> resolution.
 
-<h4>Only needed for the python version</h4>
--requirements.txt
+
 
 
 <br><br><br>
 
 <h2>Instalation</h2>
 
-<h3>For .py</h3>
-
-```console
-# Get the repo
-git clone https://github.com/manchas73/lol_autoaccept
-
-# Move to the autoaccept folder
-cd lol_autoaccept
-
-# Install the requirements
-pip3 install -r requirements.txt
-
-```
-
-
-<h3>For .exe</h3>
 
 <pre>
 1. Download the release
@@ -60,9 +48,8 @@ pip3 install -r requirements.txt
 
 <h2>Usage</h2>
 <br>
-You will execute the autoaccept
 
-Python3 autoaccept.py or Double click on the .exe
+First execute the autoaccept.exe
 <br><br>
 <p align="center"> <img src="https://github.com/manchas73/lol_autoaccept/assets/46001842/f3950d0a-4352-4bb3-b53e-d68cec5ef1a0"></p>
 
