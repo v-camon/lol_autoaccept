@@ -37,7 +37,7 @@ Have LOL client
 
 2. Install it
 
-3. Execute the autoaccept.exe</pre>
+3. Execute the autoaccept</pre>
 
 
 <br><br><br>
@@ -45,7 +45,7 @@ Have LOL client
 <h2>Usage</h2>
 <br>
 
-First execute the autoaccept.exe
+First execute the autoaccept
 <br><br>
 <p align="center"> <img src="https://github.com/manchas73/lol_autoaccept/assets/46001842/f3950d0a-4352-4bb3-b53e-d68cec5ef1a0"></p>
 
