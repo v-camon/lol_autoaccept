@@ -22,11 +22,7 @@
 
 <h2>Requirements</h2>
 
-Have the client on spanish
-<br>
-Have the client on 1600x900 resolution
-<br>
-For now this is only working with the client on <strong>Spanish</strong> and <strong>1600x900</strong> resolution.
+Have LOL client
 
 
 
