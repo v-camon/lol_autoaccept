@@ -9,30 +9,27 @@ import sys
 
 
 
-x=1
-y=2
-
 mouse = Controller()
 
 
-ruta_base = '.\\data\\'
 
-rutas = [ruta_base + 'a.png',
-         ruta_base + 'b.png',
-         ruta_base + 'c.png',
-         ruta_base + 'd.png',
-         ruta_base + 'x.png',
-         '.\\data\\res_1.png',
-         '.\\data\\res_2.png',
-         '.\\data\\res_3.png']
+
+
+
+rutas_check = ['.\\data\\res_1.png',
+               '.\\data\\res_2.png',
+               '.\\data\\res_3.png'
+               ]
+
+
 a = 0
 b = 1
 c = 2
 d = 3
 x = 4
-res1 = 5
-res2 = 6
-res3 = 7
+res1 = 0
+res2 = 1
+res3 = 2
 
 
 global run
@@ -60,7 +57,46 @@ class img:
 
 class check_resolution:
     def __init__(self):
-        pass
+        self.ruta_base = None
+        
+        imagen_res1 = img(rutas_check[res1])
+        imagen_res2 = img(rutas_check[res2])
+        imagen_res3 = img(rutas_check[res3])
+
+        imagen_res2.find()
+        if imagen_res2.position:
+            self.ruta_base = '.\\data\\res2\\'
+            print('res2')
+    
+        imagen_res3.find()
+        if imagen_res3.position:
+            self.ruta_base = '.\\data\\res3\\'
+            print('res3')
+    
+        imagen_res1.find()
+        if imagen_res1.position:
+            self.ruta_base = '.\\data\\res1\\'
+            print('res1')
+
+
+def create_images():
+    global imagenA,imagenB,imagenC,imagenD,imagenX,check_res
+    check_res=check_resolution()
+    
+    rutas = [check_res.ruta_base + 'a.png',
+         check_res.ruta_base + 'b.png',
+         check_res.ruta_base + 'c.png',
+         check_res.ruta_base + 'd.png',
+         check_res.ruta_base + 'x.png',
+         ]
+    imagenA = img(rutas[a])
+    imagenB = img(rutas[b])
+    imagenC = img(rutas[c])
+    imagenD = img(rutas[d])
+    imagenX = img(rutas[x])
+    
+   
+    
 
 
 
@@ -80,6 +116,7 @@ class poss:
 def frst ():
     state.search()
     run = True
+    create_images()
     time.sleep(1)
 
     imagenD.find()
@@ -108,12 +145,12 @@ def search():
     x, y, width, height = imagenA.position
     x += 37
     y += 37
-    poss.get()
+    # poss.get()
     mouse.position = (x, y)
     mouse.press(Button.left)
     mouse.release(Button.left)
     print("Autoaccept completed.")
-    poss.ret()
+    # poss.ret()
     state.check()
     time.sleep(10)
     check()
@@ -228,14 +265,10 @@ state.ready()
 
 Graf.resizable(False,False)
 
-imagenA = img(rutas[a])
-imagenB = img(rutas[b])
-imagenC = img(rutas[c])
-imagenD = img(rutas[d])
-imagenX = img(rutas[x])
-imagen_res1 = img(rutas[res1])
-imagen_res2 = img(rutas[res2])
-imagen_res3 = img(rutas[res1])
+
+
+
+
 
 Graf.protocol("WM_DELETE_WINDOW", on_closing)
 
