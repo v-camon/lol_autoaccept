@@ -35,7 +35,7 @@ Have LOL client
 <pre>
 1. Download the release
 
-2. Unzip it
+2. Install it
 
 3. Execute the autoaccept.exe</pre>
 
