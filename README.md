@@ -35,7 +35,7 @@ Have LOL client
 <pre>
 1. Download the release
 
-2. Install it
+2. Unzip it
 
 3. Execute the autoaccept</pre>
 
@@ -47,10 +47,21 @@ Have LOL client
 
 First execute the autoaccept
 <br><br>
+
+
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/63dca454-7a68-423c-b217-0f99c263eda7"></p>
+
+<h3 align="center">Conncting State</h3>
+Once you open it, it will be like this. You now have to wait the AutoAccept to connect to the API.
+
+The red L means that it is connecting to the API
+
+<br><br>
 <p align="center"> <img src="https://github.com/manchas73/lol_autoaccept/assets/46001842/f3950d0a-4352-4bb3-b53e-d68cec5ef1a0"></p>
 
 <h3 align="center">Ready State</h3>
-Once you open it, it will be like this. If u click the [START] it will start to search a game or the accept button, depending if you are searching or not.
+Once is connected it, it will be like this. If you click the [START] button it will start the autoaccept. If you are the party leader and you are not in the search queue, this will start de search, otherwise it will wait to the Accept to pop up.
 
 The green L means that it is ready to search
 
@@ -58,7 +69,7 @@ The green L means that it is ready to search
 <p align="center"> <img src="https://github.com/manchas73/lol_autoaccept/assets/46001842/b94ee032-08a9-472f-8244-4a95509670da"></p>
 
 <h3 align="center">Search State</h3>
-When the search of the accept button starts the button will change to red, if you press it it will return to the inital point "Ready State".
+When the search of the match  starts the [START] button will change to red, if you press it it will return to the "Ready State" and stop the search if you are the party leader.
 
 The blue L means that is searching
 
@@ -67,7 +78,7 @@ The blue L means that is searching
 <p align="center"> <img src="https://github.com/manchas73/lol_autoaccept/assets/46001842/5b6006d1-a1f9-4a8f-bd8b-f753beb1e6b6"></p>
 
 <h3 align="center" >Check State</h3>
-After accepting a match it will check if the others also accept, if they do it will close, if not it will go back "Search State".
+After accepting a match it will check if the others also accept, if they do it will close, if not it will go back "Search State". This search will remain until the game starts. So if some one dodge the match on the champion select it will return to the "Search State".
 
 The blue L means that is checking
 
