@@ -80,5 +80,5 @@ The blue L means that is searching
 <h3 align="center" >Check State</h3>
 After accepting a match it will check if the others also accept, if they do it will close, if not it will go back "Search State". This search will remain until the game starts. So if some one dodge the match on the champion select it will return to the "Search State".
 
-The blue L means that is checking
+The yellow L means that is checking
 
