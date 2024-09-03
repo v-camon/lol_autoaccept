@@ -174,19 +174,3 @@ search = Search()
 lobby = Lobby()
 graf = interface()
 graf.main()
-
-
-
-
-
-
-def test():
-    while True:
-        time.sleep(7)
-        print(lcu.get('/lol-gameflow/v1/gameflow-phase'))
-        #None
-        #Lobby
-        #Matchmaking
-        #ReadyCheck
-        #ChampSelect
-        #InProgress
