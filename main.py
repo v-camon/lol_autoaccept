@@ -7,6 +7,9 @@ import pythoncom
 import sys
 
 
+       
+
+
 
 
 def btnmain():
@@ -14,7 +17,9 @@ def btnmain():
         lobby.isLeader()
 
         search.start()
-        # time.sleep(1)
+
+        
+        graf.imgstate(2)
         search.readyCheck()
 
 
@@ -43,20 +48,25 @@ class interface:
         self.Graf.protocol("WM_DELETE_WINDOW", on_closing)
         self.Graf.mainloop()
         
+        
 
     def imgstate(self,state):
+        global current_state
         rutas = [r".\data\state_notReady.png",
                 r".\data\state_ready.png",
                 r".\data\state_search.png",
                 r".\data\state_check.png"]
-    
-        canvas = tk.Canvas(self.Graf, width=37, height=37, bg='#373737', highlightthickness=0)
-        canvas.place(relx=0.3, rely=0.5, anchor="center")
-        setimg = Image.open(rutas[state])
-        setimg = setimg.resize((37,37))
-        self.img = ImageTk.PhotoImage(setimg)
-        canvas.delete("all")
-        canvas.create_image(0, 0, anchor="nw", image=self.img)
+        if current_state!=state:
+            current_state = state
+            canvas = tk.Canvas(self.Graf, width=37, height=37, bg='#373737', highlightthickness=0)
+            canvas.place(relx=0.3, rely=0.5, anchor="center")
+            setimg = Image.open(rutas[state])
+            setimg = setimg.resize((37,37))
+            self.img = ImageTk.PhotoImage(setimg)
+            canvas.delete("all")
+            canvas.create_image(0, 0, anchor="nw", image=self.img)
+        else:
+            pass
         
     
     def btnstart(self):
@@ -95,7 +105,6 @@ class Search:
         graf.imgstate(1)
 
     def readyCheck(self):
-        graf.imgstate(2)
         while self.running:
             print ('Not match yet')
             phase = lcu.get('/lol-gameflow/v1/gameflow-phase')
@@ -103,6 +112,7 @@ class Search:
             if phase == 'ReadyCheck':
                 self.accept()
                 break
+            graf.imgstate(2)
             time.sleep(2)
 
     def accept(self):
@@ -116,11 +126,13 @@ class Search:
         while True:
             phase = lcu.get('/lol-gameflow/v1/gameflow-phase')
             print(phase)
-            if phase == 'Matchmaking' or phase == 'Lobby':
+
+            if phase == 'Matchmaking' or phase == 'Lobby' or phase == "ReadyCheck":
                 print ('Repeat')
                 self.readyCheck()
                 break
             
+
             if phase == 'InProgress': 
                 print('exiting')
                 graf.Graf.quit()
@@ -169,7 +181,7 @@ threading.Thread(target=wait_for_client_to_open).start()
 
 
 
-
+current_state = 73
 search = Search()
 lobby = Lobby()
 graf = interface()
