@@ -63,7 +63,7 @@ The red L means that it is connecting to the API
 
 <h3 align="center">↑</h3>
 <h3 align="center">Ready State</h3>
-Once is connected it, it will be like this. If you click the [START] button it will start the autoaccept. If you are the party leader and you are not in the search queue, this will start de search, otherwise it will wait to the Accept to pop up.
+Once is connected, it will be like this. If you click the [START] button it will start the autoaccept. If you are the party leader and you are not in the search queue, this will start de search, otherwise it will wait to the Accept to pop up.
 
 The green L means that it is ready to search
 
